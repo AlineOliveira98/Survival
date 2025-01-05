@@ -11,6 +11,19 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
     public Action<float, float> OnHealthChanged;
 
+    #region Singleton
+    public static PlayerHealth Instance { get; private set; }
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+            Destroy(gameObject);
+        else
+            Instance = this;
+        
+        // DontDestroyOnLoad(gameObject);
+    }
+    #endregion
+
     void Start()
     {
        Initialise(); 

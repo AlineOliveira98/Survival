@@ -6,13 +6,26 @@ using UnityEngine;
 
 public class PlayerStamina : MonoBehaviour
 {
-    [SerializeField] StarterAssetsInputs input;
     [SerializeField] float maxStaminaBase;
-    [SerializeField] float costSprint;
+    [SerializeField] float recoveryRate;
     float currentStamina;
     float maxStaminaTotal;
+    float currentConsume;
 
     public Action<float, float> OnStaminaChanged;
+
+    #region Singleton
+    public static PlayerStamina Instance { get; private set; }
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+            Destroy(gameObject);
+        else
+            Instance = this;
+        
+        // DontDestroyOnLoad(gameObject);
+    }
+    #endregion
 
     void Start()
     {
@@ -21,13 +34,16 @@ public class PlayerStamina : MonoBehaviour
 
     void Update()
     {
-        if(input.sprint)
+        if(currentConsume <= 0)
         {
-            ChangeStamina(-costSprint * Time.deltaTime);
+            if(currentStamina < maxStaminaTotal)
+            {
+                ModifyStamina(recoveryRate * Time.deltaTime);
+            }
         }
-        else if(currentStamina < maxStaminaTotal)
+        else
         {
-            ChangeStamina(Time.deltaTime);
+            ModifyStamina(-currentConsume * Time.deltaTime);
         }
     }
 
@@ -38,9 +54,14 @@ public class PlayerStamina : MonoBehaviour
         OnStaminaChanged?.Invoke(currentStamina, maxStaminaTotal);
     }
 
-    public void ChangeStamina(float value)
+    public void ModifyStamina(float value)
     {
         currentStamina = Mathf.Clamp(currentStamina + value, 0, maxStaminaTotal);
         OnStaminaChanged?.Invoke(currentStamina, maxStaminaTotal);
+    }
+
+    public void ModifyConsumeStamina(float value)
+    {
+        currentConsume += value;
     }
 }

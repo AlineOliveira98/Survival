@@ -11,10 +11,11 @@ public class PlayerState
     float currentValue;
     float maxTotalValue;
     float decayValueTotal;
+    float currentTime = 0;
+    bool lockDecay;
 
     public Action<float, float> OnStateChanged;
-
-    float currentTime = 0;
+    public Action OnStateReachedZero;
 
     public void Initialise()
     {
@@ -24,11 +25,15 @@ public class PlayerState
         OnStateChanged?.Invoke(currentValue, maxTotalValue);
     }
 
+    public void LockDecay(bool lockDecay) => this.lockDecay = lockDecay;
+
     public void UpdateState()
     {
+        if(lockDecay) return;
+
         currentTime += Time.deltaTime;
 
-        if(currentTime >= decayRate)
+        if(currentTime >= decayRate && currentValue > 0)
         {
             Modify(-decayValueTotal);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
             currentTime = 0;
@@ -39,5 +44,10 @@ public class PlayerState
     {
         currentValue = Mathf.Clamp(currentValue + amount, 0, maxTotalValue);
         OnStateChanged?.Invoke(currentValue, maxTotalValue);
+
+        if(currentValue <= 0)
+        {
+            OnStateReachedZero.Invoke();
+        }
     }
 }

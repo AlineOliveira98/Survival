@@ -2161,6 +2161,7 @@ GameObject:
   - component: {fileID: 5504259220806075270}
   - component: {fileID: 3360743246545279956}
   - component: {fileID: 6360817443996404830}
+  - component: {fileID: 3213859570043360661}
   - component: {fileID: 8617459855592533431}
   m_Layer: 8
   m_Name: Player_pfb
@@ -2437,9 +2438,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e2fa9314d5a2c840ab21be1737d705a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  input: {fileID: 5504259220806075271}
   maxStaminaBase: 50
-  costSprint: 3
+  recoveryRate: 1
+--- !u!114 &3213859570043360661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8819399281915773919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 878009309db51f24b9e24a9676e2e650, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: {fileID: 5504259220806075271}
+  costSprintStamina: 1
 --- !u!114 &8617459855592533431
 MonoBehaviour:
   m_ObjectHideFlags: 0
