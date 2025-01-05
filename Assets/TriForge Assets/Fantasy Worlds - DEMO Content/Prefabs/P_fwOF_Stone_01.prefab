@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8657211003174660626}
   - component: {fileID: 7045968792858744189}
+  - component: {fileID: -3004139763656241657}
+  - component: {fileID: -2982529606322175923}
+  - component: {fileID: 4964287920320643238}
   m_Layer: 0
   m_Name: P_fwOF_Stone_01
   m_TagString: Untagged
@@ -52,6 +55,91 @@ LODGroup:
     renderers:
     - renderer: {fileID: 2814014350804778388}
   m_Enabled: 1
+--- !u!114 &-3004139763656241657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6995143996422936259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cce15c4f11f1264f8c1d7cbb03aed21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnFocus:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -2982529606322175923}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  OnUnFocus:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -2982529606322175923}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  itemReference: {fileID: 11400000, guid: ed81fb7f5c2b1f445ba0a09ede6bd060, type: 2}
+--- !u!114 &-2982529606322175923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6995143996422936259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!135 &4964287920320643238
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6995143996422936259}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.27096042
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7534817577271897872
 GameObject:
   m_ObjectHideFlags: 0

@@ -47,7 +47,7 @@ public class PlayerState
 
         if(currentValue <= 0)
         {
-            OnStateReachedZero.Invoke();
+            OnStateReachedZero?.Invoke();
         }
     }
 }

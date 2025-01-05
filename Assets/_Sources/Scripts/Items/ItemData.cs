@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Item", menuName = "Crafting/Item")]
+[CreateAssetMenu(fileName = "New Item", menuName = "Item")]
 public class ItemData : ScriptableObject
 {
-    public string itemID;
-    public string title;
+    [HideInInspector] public string itemID;
     public Sprite icon;
-    public ItemType type;
+    public string title;
     public int maxStack;
 
 #if UNITY_EDITOR

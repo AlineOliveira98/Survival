@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 1681224996073516063}
   - component: {fileID: 2775955588113319053}
   - component: {fileID: 7308341836442214987}
+  - component: {fileID: 7041709029541822048}
+  - component: {fileID: 8654515590543203654}
   m_Layer: 0
   m_Name: P_fwOF_Rock_01
   m_TagString: Untagged
@@ -75,6 +77,73 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3611471854593489396, guid: 40e9efa1eec80434e8f4ec7d54191999, type: 3}
+--- !u!114 &7041709029541822048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336222436434858099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff32060d5b12f1c4fa430cab90776464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnFocus:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8654515590543203654}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  OnUnFocus:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8654515590543203654}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  durability: 5
+  itemDrop: {fileID: 11400000, guid: ed81fb7f5c2b1f445ba0a09ede6bd060, type: 2}
+  qtdMin: 1
+  qtdMax: 3
+--- !u!114 &8654515590543203654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336222436434858099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &4986969098577478910
 GameObject:
   m_ObjectHideFlags: 0

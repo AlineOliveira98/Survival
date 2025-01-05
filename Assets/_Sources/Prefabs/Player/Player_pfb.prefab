@@ -2163,6 +2163,7 @@ GameObject:
   - component: {fileID: 6360817443996404830}
   - component: {fileID: 3213859570043360661}
   - component: {fileID: 8617459855592533431}
+  - component: {fileID: 7992420293807509371}
   m_Layer: 8
   m_Name: Player_pfb
   m_TagString: Player
@@ -2474,6 +2475,19 @@ MonoBehaviour:
     maxBaseValue: 100
     decayBaseValue: 2
     decayRate: 5
+--- !u!114 &7992420293807509371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8819399281915773919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b0da875a9dbefe479f569c5d8f83987, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionRange: 5
 --- !u!1 &8819399282005145817
 GameObject:
   m_ObjectHideFlags: 0

@@ -40,5 +40,15 @@ public class PlayerHealth : MonoBehaviour, IDamageable
     {
         currentHealth = Mathf.Clamp(currentHealth + value, 0, maxHealthTotal);
         OnHealthChanged?.Invoke(currentHealth, maxHealthTotal);
+
+        if(currentHealth <= 0)
+        {
+            Death();
+        }
+    }
+
+    public void Death()
+    {
+        
     }
 }
