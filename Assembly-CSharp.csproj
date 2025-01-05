@@ -72,6 +72,7 @@
     <Compile Include="Assets\_Sources\Scripts\UI\UIPlayerHealthBar.cs" />
     <Compile Include="Assets\_Sources\Scripts\Interfaces\IDamagable.cs" />
     <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
+    <Compile Include="Assets\_Sources\Scripts\Items\ItemsData.cs" />
     <Compile Include="Assets\_Sources\Scripts\Items\Interactable.cs" />
     <Compile Include="Assets\Military\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs" />
     <Compile Include="Assets\_Sources\Scripts\Game\GameManager.cs" />
@@ -79,7 +80,6 @@
     <Compile Include="Assets\Military\StarterAssets\InputSystem\StarterAssetsInputs.cs" />
     <Compile Include="Assets\_Sources\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\_Sources\Scripts\Items\ItemBreakable.cs" />
-    <Compile Include="Assets\_Sources\Scripts\Items\Rock.cs" />
     <Compile Include="Assets\TriForge Assets\Fantasy Worlds - DEMO Common Files\Scripts\TF_FW_WindController.cs" />
     <Compile Include="Assets\Military\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs" />
     <Compile Include="Assets\_Sources\Scripts\UI\UIHealthBar.cs" />
@@ -94,7 +94,9 @@
     <Compile Include="Assets\Military\StarterAssets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Military\StarterAssets\ThirdPersonController\Scripts\BasicRigidBodyPush.cs" />
     <Compile Include="Assets\_Sources\Helpers\LineSpacerAttribute.cs" />
+    <Compile Include="Assets\_Sources\Scripts\Items\Inventory\InventoryManager.cs" />
     <Compile Include="Assets\_Sources\Helpers\LineSpacerDrawer.cs" />
+    <Compile Include="Assets\_Sources\Scripts\UI\UIInventory.cs" />
     <Compile Include="Assets\Military\StarterAssets\ThirdPersonController\Scripts\ThirdPersonController.cs" />
     <Compile Include="Assets\_Sources\Scripts\UI\UIPlayerStats.cs" />
     <Compile Include="Assets\_Sources\Scripts\Items\ItemCollectable.cs" />

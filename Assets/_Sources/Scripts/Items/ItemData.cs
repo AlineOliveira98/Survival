@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Item", menuName = "Item")]
 public class ItemData : ScriptableObject
 {
-    [HideInInspector] public string itemID;
+    public string itemID;
     public Sprite icon;
     public string title;
     public int maxStack;
@@ -22,5 +22,3 @@ public class ItemData : ScriptableObject
     }
 #endif
 }
-
-

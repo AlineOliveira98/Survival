@@ -6,6 +6,7 @@ public class ItemCollectable : Interactable
     [SerializeField] ItemData itemReference;
     public override void Interact()
     {
+        InventoryManager.AddItem(itemReference.itemID, 1);
         Destroy(gameObject);
         base.Interact();
     }

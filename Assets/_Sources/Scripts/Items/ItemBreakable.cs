@@ -10,9 +10,10 @@ public class ItemBreakable : Interactable, IDamageable
 
     [Header("Drop Information")]
     [SerializeField] ItemData itemDrop;
-    [SerializeField] int qtdMin, qtdMax;
+    [SerializeField] int amountMin, amountMax;
 
     float currentDurability;
+    
 
     protected override void Start()
     {
@@ -38,6 +39,8 @@ public class ItemBreakable : Interactable, IDamageable
 
     public void Death()
     {
+        float amountDropped = Random.Range(amountMin, amountMax);
+        InventoryManager.AddItem(itemDrop.itemID, amountDropped);
         Destroy(gameObject);
     }
 }
